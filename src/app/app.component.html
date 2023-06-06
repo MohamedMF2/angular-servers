@@ -1,5 +1,8 @@
 <div class="container">
-  <app-cockpit></app-cockpit>
+  <app-cockpit
+   (srvCreated)="onServerAdded($event)"
+   (bpCreated)="onBlurprintAdded($event)"
+   ></app-cockpit>
   <hr />
   <div class="row">
     <div class="col-12">

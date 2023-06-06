@@ -8,7 +8,7 @@ import { IServerElement } from './server-element.interface';
 })
 export class AppComponent {
   title = 'servers';
-  serverElements: IServerElement[] = [
+  serverElements: IServerElement[] = [  
     {
       name: "header",
       type: "server",
@@ -30,4 +30,20 @@ export class AppComponent {
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     }
   ];
+
+
+  onServerAdded(serverData: { serverName: string, serverContent: string }) {
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent,
+    });
+  }
+  onBlurprintAdded(blueprintData: { serverName: string, serverContent: string }) {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: blueprintData.serverName,
+      content: blueprintData.serverContent,
+    });
+  }
 }
