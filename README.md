@@ -1,27 +1,55 @@
-# Servers
+Sure, here's an example of a README file that covers all three Angular components:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.11.
+# Angular Server Elements App
 
-## Development server
+This is an Angular app that displays a list of server elements, including headers, images, and paragraphs. Users can also add new server or blueprint elements to the list.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+To install and run this app, follow these steps:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory in your terminal or command prompt.
+3. Run `npm install` to install the app's dependencies.
+4. Run `ng serve` to launch the app in your browser.
 
-## Build
+## Components
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This app includes three Angular components:
 
-## Running unit tests
+### App Component
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The `AppComponent` is the main component of the app. It includes the `serverElements` array, which contains the list of server elements to be displayed. The `AppComponent` also includes two methods, `onServerAdded()` and `onBlueprintAdded()`, which are used to add new server or blueprint elements to the list.
 
-## Running end-to-end tests
+### Cockpit Component
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The `CockpitComponent` is a child component of the `AppComponent`. It includes input fields for the server name and content, as well as buttons for adding either a server or blueprint element. When a user clicks one of the "Add" buttons, the `CockpitComponent` emits an event that passes the new server or blueprint information to the parent `AppComponent`.
 
-## Further help
+### Server Element Component
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The `ServerElementComponent` is a child component of the `AppComponent`. It displays a single server or blueprint element in a card, with the element's name and content displayed in either bold (for server elements) or italic (for blueprint elements) text.
+
+## Usage
+
+Once the app is installed and running, you can use it to display and add server elements.
+
+To display the existing server elements, navigate to the app component template (`app.component.html`). This template includes a `server-element` component that uses `*ngFor` to iterate over the `serverElements` array and create a new instance of the `server-element` component for each element.
+
+To add a new server or blueprint element, use the `app-cockpit` component. This component includes two input fields for the server name and content, as well as buttons for adding either a server or blueprint element. When you add a new element, the app will emit an event that adds the new element to the list of server elements.
+
+## Contributing
+
+If you would like to contribute to this app, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes and commit them to your branch.
+4. Submit a pull request to the main repository.
+
+## License
+
+This app is licensed under the MIT license. See the LICENSE file for more information.
+
+---
+
+That's an example of what your README file could look like. Of course, you should customize it to fit your app and specific needs. If you have any questions or need further assistance, feel free to ask!
