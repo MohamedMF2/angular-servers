@@ -4,29 +4,54 @@
 
     <div class="mb-3">
       <label for="serverName" class="form-label">Server Name</label>
-      <input
+      <!--2 way data binding -->
+      <!-- <input
         type="text"
         class="form-control"
         id="serverName"
         placeholder="Enter server name"
         [(ngModel)]="newServerName"
+      /> -->
+      <input
+        type="text"
+        id="serverName"
+        #serverNameInput
+        class="form-control"
+        placeholder="Enter server name"
       />
     </div>
 
     <div class="mb-3">
       <label for="serverContent" class="form-label">Server Content</label>
+      <!--2 way data binding -->
+      <!-- 
       <input
         type="text"
         class="form-control"
         id="serverContent"
         placeholder="Enter server content"
         [(ngModel)]="newServerContent"
-      />
+      /> -->
+      <input
+      type="text"
+      #serverContentInput
+      class="form-control"
+      id="serverContent"
+      placeholder="Enter server content"
+    />
     </div>
 
     <div class="mb-3">
-      <button class="btn btn-primary me-3" (click)="onAddServer()">Add Server</button>
-      <button class="btn btn-primary" (click)="onAddBlurprint()"> Add Server Blueprint</button>
+      <button
+        class="btn btn-primary me-3"
+        (click)="onAddServer(serverNameInput)"
+      >
+        Add Server
+      </button>
+      <button class="btn btn-primary" (click)="onAddBlurprint(serverNameInput)">
+        Add Server Blueprint
+      </button>
     </div>
   </div>
 </div>
+ 

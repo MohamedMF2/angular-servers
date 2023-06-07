@@ -3,9 +3,6 @@
 <div class="card mb-3" *ngIf="element.type === 'blueprint' || element.type === 'server' ">
     <div class="card-header">{{ element.name }}</div>
     <div class="card-body ">
-      <p>
-        <strong *ngIf="element.type === 'server'">{{ element.content }}</strong>
-        <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
-      </p>
+      <ng-content></ng-content>
     </div>
   </div>
