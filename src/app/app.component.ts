@@ -7,6 +7,7 @@ import { IServerElement } from './server-element.interface';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  assignmentDisplay = false;
   title = 'servers';
   serverElements: IServerElement[] = [  
     {
@@ -31,6 +32,9 @@ export class AppComponent {
     }
   ];
 
+  showAssignment():void{
+    this.assignmentDisplay = !this.assignmentDisplay;
+  }
 
   onServerAdded(serverData: { serverName: string, serverContent: string }) {
     this.serverElements.push({
