@@ -1,5 +1,3 @@
-Sure, here's an example of a README file that covers all three Angular components:
-
 # Angular Server Elements App
 
 This is an Angular app that displays a list of server elements, including headers, images, and paragraphs. Users can also add new server or blueprint elements to the list.
@@ -49,7 +47,3 @@ If you would like to contribute to this app, please follow these steps:
 ## License
 
 This app is licensed under the MIT license. See the LICENSE file for more information.
-
----
-
-That's an example of what your README file could look like. Of course, you should customize it to fit your app and specific needs. If you have any questions or need further assistance, feel free to ask!
